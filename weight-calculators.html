@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Flange Weight Calculator and MS Blind/ Weld Neck Flange Weight Chart</title>
+
+
+    <script language="javascript" type="text/javascript" src="./flanges.js"></script>
+</head>
+
+<body class="home-v2">
+    <!-- Header Start -->
+
+    <!-- Blog Section Start -->
+    <div class="blog-classic-sec pt-100 pb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="service-details-desc">
+                        <div class="service-details-text">
+                            <div class="content_left">
+                                <script type="text/javascript">
+                                    var Flansche = new Flansche();
+                                </script>
+                                <div class="contact-field">
+                                    <input type="radio" value="1" name="radio1" id="fmFormType1" checked="checked"
+                                        onClick="Flansche.setNormal();" />
+                                    <label for="fmFormType1" onClick="Flansche.setNormal();Flansche.setValues('');">Flat
+                                        face flange</label>
+                                    <input type="radio" value="2" name="radio1" id="fmFormType2"
+                                        onClick="Flansche.setBlind();Flansche.setValues('');" />
+                                    <label for="fmFormType2" onClick="Flansche.setBlind();">Blind flange (smooth sealing
+                                        surface)</label>
+                                    <fieldset id="fmNormal">
+                                        <div class="single-input-field">
+                                            <label for="fmAussenDurchm" class="input_desc">Outside diameter:</label>
+                                            <input type="text" name="input1" id="fmAussenDurchm"
+                                                onChange="Flansche.validFloat(this);" /> mm <img
+                                                src="calculator/1px.gif" id="fmAussenDurchmImg" alt="" /> </div>
+                                        <div id="fmInnenDurchmesser">
+                                            <div class="form_spacer">
+                                                <label for="fmInnenDurchm" class="input_desc">Inside diameter:</label>
+                                                <input type="text" name="input2" id="fmInnenDurchm"
+                                                    onChange="Flansche.validFloat(this);" /> mm <img
+                                                    src="calculator/1px.gif" id="fmInnenDurchmImg" alt="" /> </div>
+                                        </div>
+                                        <div class="form_spacer">
+                                            <label for="fmBlattSt" class="input_desc">Sheet thickness: </label>
+                                            <input type="text" name="input3" id="fmBlattSt"
+                                                onChange="Flansche.validFloat(this);" /> mm <img
+                                                src="calculator/1px.gif" id="fmBlattStImg" alt="" /> </div>
+                                        <div class="form_spacer">
+                                            <label for="fmBohrAnz" class="input_desc">Number of drill holes: </label>
+                                            <input type="text" name="input4" id="fmBohrAnz"
+                                                onChange="Flansche.validInt(this);" />
+                                            <img src="calculator/1px.gif" id="fmBohrAnzImg" style="margin-left: 2px;"
+                                                alt="" /> </div>
+                                        <div class="form_spacer">
+                                            <label for="fmBohrDurchm" class="input_desc">Drill hole diameter:</label>
+                                            <input type="text" name="input5" id="fmBohrDurchm"
+                                                onChange="Flansche.validFloat(this);" /> mm <img
+                                                src="calculator/1px.gif" id="fmBohrDurchmImg" alt="" /> </div>
+                                        <div id="fmKantenbruch">
+                                            <div class="form_spacer">
+                                                <label for="fmKanten" class="input_desc">Chamfer (inside 45
+                                                    deg.):</label>
+                                                <input type="text" name="input6" id="fmKanten"
+                                                    onChange="Flansche.validFloat(this);" /> mm <img
+                                                    src="calculator/1px.gif" id="fmKantenImg" alt="" /> </div>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset id="fmBlind" style="display: none;">
+                                        <div class="form_spacer">
+                                            <label for="fmD9" class="input_desc">d9-Maß:</label>
+                                            <input type="text" name="input7" id="fmD9"
+                                                onChange="Flansche.validFloat(this);" /> mm <img
+                                                src="calculator/1px.gif" id="fmD9Img" alt="" /> </div>
+                                        <div style="display: none;">
+                                            <div class="form_spacer">
+                                                <label for="fmInnenDurchm2" class="input_desc">Inside diameter:</label>
+                                                <input type="text" name="input8" id="fmInnenDurchm2"
+                                                    onChange="Flansche.validFloat(this);" /> mm <img
+                                                    src="calculator/1px.gif" id="fmInnenDurchm2Img" alt="" /> </div>
+                                        </div>
+                                        <div class="form_spacer">
+                                            <label for="fmDichtLeiste" class="input_desc">Dichtleistentiefe:</label>
+                                            <input type="text" name="input9" id="fmDichtLeiste"
+                                                onChange="Flansche.validFloat(this);" /> mm <img
+                                                src="calculator/1px.gif" id="fmDichtLeisteImg" alt="" /> </div>
+                                    </fieldset>
+                                    <div id="fmErgebnis">Finished Part Weight : <b>0</b> kg</div>
+                                    <button onClick="Flansche.evalute();">Calculate</button>
+                                </div>
+                            </div>
+                            .
+                        </div>
+                    </div>
+                    <div class="service-details-text"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog Section End -->
+
+
+    <!-- Footer V1 Section End -->
+    <!-- Scripts Js Start -->
+    <!-- <script src="js/jquery-2.2.4.min.js"></script> -->
+</body>
+
+</html>
